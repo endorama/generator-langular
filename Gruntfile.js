@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('release', 'Perform a release of the package', function(type) {
     // grunt.task.run([ 'shell:git-status', 'bump-only', 'shell:npm-publish']);
-    grunt.task.run([ 'shell:git-status', 'bump' + (type ? type : 'patch'), 'shell:npm-publish']);
+    grunt.task.run([ 'shell:git-status', 'bump:' + (type ? type : 'patch'), 'shell:npm-publish']);
   });
 
   return grunt;
