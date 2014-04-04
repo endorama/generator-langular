@@ -29,7 +29,8 @@
   "devDependencies": {
     "mocha": "*",
     "grunt": "^0.4.2",
-    "grunt-bump": "0.0.13"
+    "grunt-bump": "0.0.13",
+    "grunt-shell": "^0.6.4"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
