@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-langular' ]; then cd .. && eval "mv $currentfolder generator-langular" && cd generator-langular; fi
+

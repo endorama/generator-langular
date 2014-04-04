@@ -1,0 +1,39 @@
+{
+  "name": "<%= opts.angularAppName %>",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-apidoc": "^0.3.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "^0.3.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "^0.9.0",
+    <% if (opts.useSass) { %>
+    "grunt-contrib-sass": "~0.6.0",
+    <% } %>
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-symlink": "^0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-watch": "~0.5.3",
+    <% if (opts.useCoffee) { %>
+    "grunt-coffeelint": "0.0.8",
+    <% } %>
+    <% if (opts.useCoffee) { %>
+    "grunt-coffee-redux": "^0.2.4",
+    <% } %>
+    "grunt-concurrent": "~0.4.2",
+    "grunt-newer": "~0.6.1",
+    "grunt-notify": "^0.2.17",
+    "grunt-processhtml": "^0.3.0",
+    "grunt-shell": "~0.6.1",
+    "grunt-usemin": "^2.0.2",
+    "load-grunt-config": "^0.7.1",
+    "jit-grunt": "~0.2.0",
+    "time-grunt": "~0.2.8",
+    "jshint-stylish": "^0.1.5",
+    "grunt-phplint": "0.0.5"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}

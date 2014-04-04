@@ -1,0 +1,34 @@
+default:
+  - dev:frontend
+build:dev:
+  - clean:all
+  - symlink:angular
+  - symlink:font
+  - symlink:image
+  - symlink:javascript
+  - symlink:json
+  - symlink:stylesheet
+  - symlink:vendor
+build:prod:
+  - clean:all
+  - copy:font
+  - copy:image
+  - copy:json
+  - processhtml:build_index
+  - processhtml:build_templates
+  - useminPrepare
+  - concat
+  - uglify
+  - cssmin
+  - usemin
+build:doc:
+  - apidoc:compile
+clean:all:
+  - clean:dev
+  - clean:prod
+dev:backend:
+  - concurrent:backend
+dev:frontend:
+  - clean:all
+  - build:dev
+  - concurrent:frontend
