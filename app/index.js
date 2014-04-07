@@ -94,6 +94,8 @@ var LangularGenerator = yeoman.generators.Base.extend({
       this.template('angularjs/_config.js', 'angularapp/config.js');
       this.template('angularjs/_routes.js', 'angularapp/routes.js');
 
+      // copy example module
+      this.directory('angularmodule', 'angularapp/modules/example');
 
       // scaffold laravel angular index template folder
       this.mkdir('app/views/angularjs');
