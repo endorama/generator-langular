@@ -85,9 +85,13 @@ var LangularGenerator = yeoman.generators.Base.extend({
     var createAngular = function() {
       // scaffold folders
       this.mkdir('angularapp');
+      this.write('angularapp/.gitkeep', '');
       this.mkdir('angularapp/modules');
+      this.write('angularapp/modules/.gitkeep', '');
       this.mkdir('angularapp/specs');
+      this.write('angularapp/specs/.gitkeep', '');
       this.mkdir('angularapp/templates');
+      this.write('angularapp/templates/.gitkeep', '');
 
       // scaffold files
       this.template('angularjs/_app.js', 'angularapp/app.js');
@@ -112,13 +116,25 @@ var LangularGenerator = yeoman.generators.Base.extend({
     var createAssets = function() {
       this.mkdir('assets');
 
-      (this.opts.useSass) ? this.mkdir('assets/sass') : this.mkdir('assets/css');
+      if (this.opts.useSass) {
+        this.mkdir('assets/sass');
+        this.write('assets/sass/.gitkeep', '');
+      }
+      else {
+        this.mkdir('assets/css');
+        this.write('assets/css/.gitkeep', '');
+      }
 
       this.mkdir('assets/font');
+      this.write('assets/font/.gitkeep', '');
       this.mkdir('assets/img');
+      this.write('assets/img/.gitkeep', '');
       this.mkdir('assets/js');
+      this.write('assets/js/.gitkeep', '');
       this.mkdir('assets/json');
+      this.write('assets/json/.gitkeep', '');
       this.mkdir('assets/vendor');
+      this.write('assets/vendor/.gitkeep', '');
     }.bind(this);
 
     var createDocs = function() {
