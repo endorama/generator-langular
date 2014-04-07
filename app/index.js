@@ -43,7 +43,7 @@ var LangularGenerator = yeoman.generators.Base.extend({
         type: 'confirm',
         name: 'overwriteLaravel',
         message: 'Would you like to overwrite some Laravel config automatically?',
-        default: false
+        default: true
       },
       // {
       //   type: 'confirm',
