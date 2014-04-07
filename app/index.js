@@ -83,40 +83,28 @@ var LangularGenerator = yeoman.generators.Base.extend({
     }.bind(this);
 
     var createAngular = function() {
+      // scaffold folders
       this.mkdir('angularapp');
       this.mkdir('angularapp/modules');
       this.mkdir('angularapp/specs');
       this.mkdir('angularapp/templates');
 
-      // create file array for the first scaffolding
-      var files = [];
-      if (this.opts.useCoffee) {
-        files.push('angularapp/app.coffee');
-        files.push('angularapp/config.coffee');
-        files.push('angularapp/routes.coffee');
-      }
-      else {
-        files.push('angularapp/app.js');
-        files.push('angularapp/config.js');
-        files.push('angularapp/routes.js');
-      }
+      // scaffold files
+      this.template('angularjs/_app.js', 'angularapp/app.js');
+      this.template('angularjs/_config.js', 'angularapp/config.js');
+      this.template('angularjs/_routes.js', 'angularapp/routes.js');
 
-      // create files, but only if do not exists ( enable updating project )
-      for (var i = files.length - 1; i >= 0; i--) {
-        var file = files[i];
 
-        if (!fs.existsSync(file)) {
-          if (this.opts.useCoffee)
-            this.write(file, '# ' + this.tagline);
-          else
-            this.write(file, '// ' + this.tagline);
-        }
-      };
-
+      // scaffold laravel angular index template folder
       this.mkdir('app/views/angularjs');
+
+      // copy angularjs index template
       this.template('_angularjs.php', 'app/views/angularjs/application.php');
+      
+      // overwrite laravel home controller
       if (this.opts.overwriteLaravel)
         this.copy('HomeController.php', 'app/controllers/HomeController.php');
+
     }.bind(this);
 
     var createAssets = function() {

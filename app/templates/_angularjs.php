@@ -22,7 +22,7 @@
     <script src="/angularapp/routes.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-controller="AppCtrl">
 
     <div></div>
 
