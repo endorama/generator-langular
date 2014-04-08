@@ -6,4 +6,12 @@ var app = angular.module('<%= opts.angularAppName %>', [
   'ExampleModule'
 ]);
 
-app.controller('AppCtrl', [function () {}]);
+app.controller('AppCtrl', ['$scope', function ($scope) {
+  $scope.laravel = {
+    url   : 'http://laravel.com',
+    title : 'Laravel PHP Framework'
+  };
+
+  $scope.message = 'You have arrived.';
+
+}]);
