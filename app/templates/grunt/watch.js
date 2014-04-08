@@ -36,6 +36,9 @@ module.exports = {
     tasks: [ 'shell:phpunit' ]
   },
 
-  frontend_test: {},
+  frontend_test: {
+    files: [ 'angularapp/**/*.js' ],
+    tasks: []
+  },
 
 };
