@@ -1,3 +1,5 @@
+'use strict';
+
 var app = angular.module('<%= opts.angularAppName %>', [
   'underscore',
   'ui.bootstrap',
