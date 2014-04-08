@@ -106,7 +106,7 @@ var LangularGenerator = yeoman.generators.Base.extend({
 
       // copy angularjs index template
       this.template('_angularjs.php', 'app/views/angularjs/application.php');
-      
+
       // overwrite laravel home controller
       if (this.opts.overwriteLaravel)
         this.copy('HomeController.php', 'app/controllers/HomeController.php');
@@ -118,11 +118,11 @@ var LangularGenerator = yeoman.generators.Base.extend({
 
       if (this.opts.useSass) {
         this.mkdir('assets/sass');
-        this.write('assets/sass/.gitkeep', '');
+        this.write('assets/sass/screen.sass', '');
       }
       else {
         this.mkdir('assets/css');
-        this.write('assets/css/.gitkeep', '');
+        this.write('assets/css/screen.css', '');
       }
 
       this.mkdir('assets/font');

@@ -6,7 +6,7 @@
     <title><%= _.humanize(opts.angularAppName) %></title>
 
     <!-- build:css(assets/) /styles.css -->
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/screen.css" rel="stylesheet">
     <!-- endbuild -->
 
     <!-- build:js(assets/) /vendors.js -->
@@ -20,7 +20,7 @@
     <script src="/angularapp/app.js"></script>
     <script src="/angularapp/config.js"></script>
     <script src="/angularapp/routes.js"></script>
-    
+
     <script src="/angularapp/modules/example/example.module.js"></script>
     <script src="/angularapp/modules/example/example.ctrl.js"></script>
     <script src="/angularapp/modules/example/example.srv.js"></script>
