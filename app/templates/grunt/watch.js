@@ -1,8 +1,4 @@
 module.exports = {
-  options: {
-    livereload: true
-  },
-
   apidoc: {
     files: [ 'app/**/*.php' ],
     tasks: [ 'apidoc:compile', 'notify:apidoc' ]
@@ -27,7 +23,10 @@ module.exports = {
   // little hack to include symlinked file in livereload
   livereload: {
     files: [ 'public/**/*', 'app/views/angularjs/application.php' ],
-    tasks: []
+    tasks: [],
+    options: {
+      livereload: true
+    }
   },
 
   backend_test: {
