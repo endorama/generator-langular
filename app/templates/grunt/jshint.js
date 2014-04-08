@@ -1,6 +1,6 @@
 module.exports = {
   options: {
-    jshintrc: true,
+    jshintrc: '.jshintrc',
     reporter: require('jshint-stylish')
   },
   angularapp: [ 'angularapp/**/*.js' ],
