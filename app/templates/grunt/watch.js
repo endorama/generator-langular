@@ -1,7 +1,6 @@
 module.exports = {
   options: {
-    livereload: true,
-    spawn: true
+    livereload: true
   },
 
   apidoc: {
@@ -10,7 +9,7 @@ module.exports = {
   },
 
   angularapp: {
-    files: 'angularapp/*.js',
+    files: 'angularapp/**/*.js',
     tasks: [ 'newer:jshint:angularapp' ],
   },
 
@@ -21,7 +20,7 @@ module.exports = {
 
   laravelapp: {
     files: [ 'app/**/*.php', 'bootstrap/**/*.php' ],
-    tasks: [ 'newer:phplint:laravelapp' ]
+    tasks: [ 'newer:phplint:laravelapp', 'shell:phpunit' ]
   },
 
   // enable livereload, see http://livereload.com/
@@ -38,7 +37,7 @@ module.exports = {
 
   frontend_test: {
     files: [ 'angularapp/**/*.js' ],
-    tasks: []
+    tasks: [  ]
   },
 
 };

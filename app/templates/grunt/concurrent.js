@@ -6,12 +6,12 @@ module.exports = {
   frontend: {
     tasks: [
       'shell:artisan',
-      'customWatch:angularapp:livereload:frontend_test'
+      'customWatch:angularapp:livereload'
     ]
   },
   backend: {
     tasks: [
-      'watch:apidoc:backend_test:laravelapp'
+      'customWatch:laravelapp:apidoc'
     ]
   }
 };
