@@ -122,7 +122,7 @@ var LangularGenerator = yeoman.generators.Base.extend({
       }
       else {
         this.mkdir('assets/css');
-        this.write('assets/css/screen.css', '');
+        this.copy('assets/screen.css', 'assets/css/screen.css');
       }
 
       this.mkdir('assets/font');
