@@ -4,6 +4,4 @@ var app = angular.module('<%= opts.angularAppName %>', [
   'ExampleModule'
 ]);
 
-app.controller('AppCtrl', ['', function(){
-  
-}]);
+app.controller('AppCtrl', [function () {}]);
