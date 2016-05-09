@@ -1,5 +1,8 @@
 # Yeoman Langular generator
 
+**Deprecated**: as I moved from Laravel to Rails this project is no longer maintained. If you would like to work on it please get in touch :)
+
+
 This generator scaffold an AngularJS application inside a Laravel one. Useful for developing a rich frontend using Laravel and backend API.
 
 ## Install
